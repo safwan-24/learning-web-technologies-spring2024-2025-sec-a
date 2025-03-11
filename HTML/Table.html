@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 2px solid black;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table</h1>
+    <table>
+        <caption>Form inside Table</caption>
+        <thead>
+            <tr>
+                <th>Labels</th>
+                <th>Inputs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First name</td>
+                <td><input type="text" name="" id=""></td>
+
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td><input type="number" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Date Of Birth</td>
+                <td><input type="date" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" id="">male
+                    <input type="radio" name="gender" id="">female
+                    <input type="radio" name="gender" id="">other
+                </td>
+            </tr>
+            <tr>
+                <td>Occupation</td>
+                <td>
+                    <input type="checkbox" name="" id="">Student
+                    <input type="checkbox" name="" id="">Jobholder
+                    <input type="checkbox" name="" id="">Businessman
+                </td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>
+                    <select name="department" id="">Department
+                        <option value="cse">CSE</option>
+                        <option value="eee">EEE</option>
+                        <option value="llb">LLB</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td><input type="file" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="" id="" placeholder="Steet, City, Country"></textarea></td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <button type="submit"></button>
+                    <button type="reset"></button>
+
+                </td>
+            </tr>
+
+        </tfoot>
+    </table>
+</body>
+</html>
