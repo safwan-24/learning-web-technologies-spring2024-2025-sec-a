@@ -3,53 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
+    <link rel="shortcut icon" href="pictures/registration-icon.png" type="image/x-icon">
+    <style>
+        label{
+            display: block;
+            margin-bottom: 30px;
+        }
+        input{
+
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-    <label for="First Name">First Name</label>
-    <input type="text" name="" id="">
-    <br>
-    <br>
-    <label for="Last Name">Last Name</label>
-    <input type="text" name="" id="">
-    <br>
-    <br>    
-    <label for="ID">ID</label>
+        <header>
+
+        </header>
+        <main>
+            <section>
+                <h3>Please fill up the form</h3>
+            </section>
+            <form action="">
+     
+    <label for="First Name">First Name
+    <input type="text" name="" id="First name">
+    </label>
+
+    <label for="Last Name">Last Name
+    <input type="text" name="" id="Last name">
+    </label>   
+
+    <label for="ID">ID    
     <input type="number" name="" id="">
-    <br>
-    <br>
-    <label for="email">Email</label>
+</label>
+
+    <label for="email">Email
     <input type="email" name="" id="">
-    <br>
-    <br>
-    <label for="password">Password</label>
+</label>
+
+    <label for="password">Password
     <input type="password" name="" id="">
-    <br>
-    <br>
-    <label for="dob">Date of Birth</label>
+</label>
+
+    <label for="dob">Date of Birth
     <input type="date" name="" id="">
-    <br>
-    <br>
-    <label for="Gender">Gender</label>
-    <input type="radio" name="1" id="">Male
-    <input type="radio" name="1" id="">Female
-    <input type="radio" name="1" id="">Other
-    <br>
-    <br>
-    <label for="checkbox">checkbox</label>
-    <input type="checkbox" name="" id="">
-    <br>
-    <br>
+</label>
+
+    <label for="gender">Gender
+    <input type="radio" name="gender" id="">Male
+    <input type="radio" name="gender" id="">Female
+    <input type="radio" name="gender" id="">Other
+</label>
+
+    <label for="occupation">Occupation
+    <input type="checkbox" name="occupation" id="student">Student
+    <input type="checkbox" name="occupation" id="job">Job Holder
+    <input type="checkbox" name="occupation" id="business">Businessman
+</label>
+
+<label for="department">Department
     <select name="department" id="">Department
         <option value="cse">CSE</option>
         <option value="eee">EEE</option>
         <option value="llb">LLB</option>
     </select>
-    <label for="image">Image</label>
-    <input type="file" name="" id="">
-    <br>
-    <br>
-    
+</label>
 
+    <label for="image">Image
+    <input type="file" name="" id="">
+    </label>
+    <label for="address">Address
+        <br>
+        <textarea name="" id="" placeholder="Street, City, Country"></textarea>
+    </label>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+</form>
+</main>
+<footer>
+
+</footer>
 </body>
 </html>
