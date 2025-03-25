@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Gender Selection</title>
@@ -15,7 +14,6 @@
             let gender = document.forms["genderForm"]["gender"];
             let genderSelected = false;
 
-            // Loop through the radio buttons to check if one is selected
             for (let i = 0; i < gender.length; i++) {
                 if (gender[i].checked) {
                     genderSelected = true;
@@ -23,7 +21,6 @@
                 }
             }
 
-            // If no gender is selected, show an alert
             if (!genderSelected) {
                 alert("Please select a gender.");
                 return false;
