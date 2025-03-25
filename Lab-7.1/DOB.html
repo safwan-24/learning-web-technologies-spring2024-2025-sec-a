@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date of Birth Validation</title>
+</head>
+<body>
+    <form name="dobForm" onsubmit="return validateDOB()">
+        Day: <input type="text" name="day" maxlength="2" size="2"><br>
+        Month: <input type="text" name="month" maxlength="2" size="2"><br>
+        Year: <input type="text" name="year" maxlength="4" size="4"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateDOB() {
+            let day = document.forms["dobForm"]["day"].value;
+            let month = document.forms["dobForm"]["month"].value;
+            let year = document.forms["dobForm"]["year"].value;
+
+            // Check if any of the fields are empty
+            if (day == "" || month == "" || year == "") {
+                alert("All fields (day, month, year) are required.");
+                return false;
+            }
+
+            // Validate day, month, and year as numeric values
+            if (isNaN(day) || isNaN(month) || isNaN(year)) {
+                alert("Invalid Date of Birth: Day, month, and year must be numeric.");
+                return false;
+            }
+
+            day = parseInt(day);
+            month = parseInt(month);
+            year = parseInt(year);
+
+            // Validate the month (should be between 1 and 12)
+            if (month < 1 || month > 12) {
+                alert("Invalid Date of Birth: Month must be between 01 and 12.");
+                return false;
+            }
+
+            // Validate the day (should be between 1 and 31)
+            if (day < 1 || day > 31) {
+                alert("Invalid Date of Birth: Day must be between 01 and 31.");
+                return false;
+            }
+
+            // Validate the year (should be between 1900 and 2016)
+            if (year < 1900 || year > 2016) {
+                alert("Invalid Date of Birth: Year must be between 1900 and 2016.");
+                return false;
+            }
+
+            // Validate day based on the month
+            if ((month === 4 || month === 6 || month === 9 || month === 11) && day > 30) {
+                alert("Invalid Date of Birth: The month has only 30 days.");
+                return false;
+            }
+
+            // Validate February (Leap year check)
+            if (month === 2) {
+                let isLeapYear = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0));
+                if ((isLeapYear && day > 29) || (!isLeapYear && day > 28)) {
+                    alert("Invalid Date of Birth: February has only 28 or 29 days.");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
